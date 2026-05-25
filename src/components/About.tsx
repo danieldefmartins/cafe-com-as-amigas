@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="sobre" className="py-24 md:py-28 bg-cream">
@@ -14,13 +16,16 @@ export default function About() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
-          {/* Image placeholder */}
+          {/* Image */}
           <div>
-            <div className="aspect-[4/5] bg-gradient-to-br from-blush to-cream-dark flex flex-col items-center justify-center gap-3 text-warm-gray-light border border-dashed border-gold-light">
-              <span className="text-4xl opacity-40">&#9733;</span>
-              <span className="text-[0.75rem] tracking-[2px] uppercase font-medium">
-                Foto do Grupo
-              </span>
+            <div className="aspect-[4/5] relative overflow-hidden">
+              <Image
+                src="/images/about-group.jpg"
+                alt="Grupo de mulheres do Cafe com as Amigas"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <p className="mt-3 text-[0.7rem] tracking-[2px] uppercase text-warm-gray-light text-center">
               Desde outubro de 2024

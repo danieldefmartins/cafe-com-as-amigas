@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Podcast() {
   return (
     <section id="podcast" className="py-24 md:py-28 bg-white">
@@ -44,12 +46,16 @@ export default function Podcast() {
             </a>
           </div>
 
-          {/* Image placeholder */}
-          <div className="aspect-square bg-gradient-to-br from-charcoal to-charcoal-light flex flex-col items-center justify-center gap-3 border border-dashed border-gold/30">
-            <span className="text-6xl opacity-40 text-gold">&#127911;</span>
-            <span className="text-[0.75rem] tracking-[2px] uppercase font-medium text-gold-light">
-              Podcast Cover
-            </span>
+          {/* Image */}
+          <div className="aspect-square relative overflow-hidden">
+            <Image
+              src="/images/erica-teaching.jpg"
+              alt="Cafe com as Amigas Podcast"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 to-transparent" />
           </div>
         </div>
       </div>

@@ -1,22 +1,29 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
       id="inicio"
       className="relative min-h-screen flex items-center justify-center text-center overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(135deg, #2D1B14 0%, #1A1A1A 30%, #2D2420 60%, #1A1510 100%)",
-      }}
     >
+      {/* Background image */}
+      <Image
+        src="/images/hero-group.jpg"
+        alt="Cafe com as Amigas - grupo de mulheres"
+        fill
+        className="object-cover"
+        priority
+        quality={85}
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/60 z-[1]" />
       {/* Pattern overlay */}
       <div
-        className="absolute inset-0 opacity-50"
+        className="absolute inset-0 opacity-30 z-[2]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><pattern id='p' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='1' cy='1' r='0.5' fill='rgba(198,166,100,0.08)'/></pattern></defs><rect width='100' height='100' fill='url(%23p)'/></svg>")`,
+          backgroundImage: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><pattern id='p' width='20' height='20' patternUnits='userSpaceOnUse'><circle cx='1' cy='1' r='0.5' fill='rgba(198,166,100,0.12)'/></pattern></defs><rect width='100' height='100' fill='url(%23p)'/></svg>")`,
         }}
       />
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
 
       <div className="relative z-10 px-6 py-32 max-w-[800px]">
         <p className="font-sans text-[0.7rem] font-medium tracking-[4px] uppercase text-gold mb-6">

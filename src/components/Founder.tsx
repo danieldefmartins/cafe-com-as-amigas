@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Founder() {
   return (
     <section className="py-24 md:py-28 bg-charcoal text-white">
@@ -29,13 +31,17 @@ export default function Founder() {
             </p>
           </div>
 
-          {/* Image placeholder */}
+          {/* Image */}
           <div className="order-first md:order-last">
-            <div className="aspect-[3/4] bg-gradient-to-br from-gold/15 to-gold/5 flex flex-col items-center justify-center gap-3 text-warm-gray-light border border-dashed border-gold/30">
-              <span className="text-4xl opacity-40">&#9829;</span>
-              <span className="text-[0.75rem] tracking-[2px] uppercase font-medium">
-                Foto da Erica
-              </span>
+            <div className="aspect-[3/4] relative overflow-hidden">
+              <Image
+                src="/images/erica-speaking.jpg"
+                alt="Erica - Fundadora do Cafe com as Amigas"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent" />
             </div>
           </div>
         </div>

@@ -1,15 +1,24 @@
+import Image from "next/image";
+
 export default function CTA() {
   return (
     <section
       className="relative py-28 md:py-32 text-center overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(135deg, #B76E79 0%, #9B5460 50%, #7A3F4A 100%)",
-      }}
     >
+      {/* Background image */}
+      <Image
+        src="/images/prayer-circle.jpg"
+        alt="Circulo de oracao"
+        fill
+        className="object-cover"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-rose/80 mix-blend-multiply z-[1]" />
+      <div className="absolute inset-0 bg-black/30 z-[2]" />
+
       {/* Pattern overlay */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-[3]"
         style={{
           backgroundImage: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><pattern id='d' width='30' height='30' patternUnits='userSpaceOnUse'><circle cx='15' cy='15' r='1' fill='rgba(255,255,255,0.05)'/></pattern></defs><rect width='100' height='100' fill='url(%23d)'/></svg>")`,
         }}

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Events() {
   return (
     <section id="eventos" className="py-24 md:py-28 bg-cream">
@@ -22,11 +24,14 @@ export default function Events() {
             <span className="absolute top-4 left-4 bg-gold text-white text-[0.6rem] font-semibold tracking-[2px] uppercase px-4 py-1.5 z-10">
               Proximo Evento
             </span>
-            <div className="h-[280px] bg-gradient-to-br from-blush to-cream-dark flex flex-col items-center justify-center gap-3 text-warm-gray-light border-b border-black/5">
-              <span className="text-4xl opacity-40">&#10047;</span>
-              <span className="text-[0.75rem] tracking-[2px] uppercase font-medium">
-                Imagem do Evento
-              </span>
+            <div className="h-[280px] relative overflow-hidden">
+              <Image
+                src="/images/event-outdoor.jpg"
+                alt="Evento Despertar"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <div className="p-8">
               <h3 className="font-display text-2xl font-semibold tracking-wider mb-2">
@@ -71,11 +76,14 @@ export default function Events() {
 
           {/* Monthly Meetings */}
           <div className="bg-white border border-black/5 hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all overflow-hidden">
-            <div className="h-[160px] bg-gradient-to-br from-blush to-cream-dark flex flex-col items-center justify-center gap-3 text-warm-gray-light border-b border-black/5">
-              <span className="text-4xl opacity-40">&#9834;</span>
-              <span className="text-[0.75rem] tracking-[2px] uppercase font-medium">
-                Encontros
-              </span>
+            <div className="h-[160px] relative overflow-hidden">
+              <Image
+                src="/images/meeting-intimate.jpg"
+                alt="Encontro mensal"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <div className="p-8">
               <h3 className="font-display text-xl font-semibold mb-3">
@@ -95,11 +103,14 @@ export default function Events() {
 
           {/* Trips */}
           <div className="bg-white border border-black/5 hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all overflow-hidden">
-            <div className="h-[160px] bg-gradient-to-br from-blush to-cream-dark flex flex-col items-center justify-center gap-3 text-warm-gray-light border-b border-black/5">
-              <span className="text-4xl opacity-40">&#10024;</span>
-              <span className="text-[0.75rem] tracking-[2px] uppercase font-medium">
-                Passeios
-              </span>
+            <div className="h-[160px] relative overflow-hidden">
+              <Image
+                src="/images/event-outdoor-wide.jpg"
+                alt="Passeios e experiencias"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <div className="p-8">
               <h3 className="font-display text-xl font-semibold mb-3">

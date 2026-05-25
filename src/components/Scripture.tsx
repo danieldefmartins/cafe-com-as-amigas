@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const cards = [
   {
     title: "Para a Mulher Cansada",
@@ -29,14 +31,20 @@ export default function Scripture() {
     <section
       id="palavra"
       className="relative py-28 md:py-32 overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(135deg, #2D1B14 0%, #1A1A1A 50%, #0D0D0D 100%)",
-      }}
     >
+      {/* Background image */}
+      <Image
+        src="/images/prayer-embrace.jpg"
+        alt="Momento de oracao"
+        fill
+        className="object-cover"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-black/80 z-[1]" />
+
       {/* Cross pattern overlay */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-[2]"
         style={{
           backgroundImage: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><pattern id='cross' width='40' height='40' patternUnits='userSpaceOnUse'><line x1='20' y1='10' x2='20' y2='30' stroke='rgba(198,166,100,0.05)' stroke-width='1'/><line x1='10' y1='20' x2='30' y2='20' stroke='rgba(198,166,100,0.05)' stroke-width='1'/></pattern></defs><rect width='200' height='200' fill='url(%23cross)'/></svg>")`,
         }}

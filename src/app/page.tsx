@@ -8,6 +8,7 @@ import Scripture from "@/components/Scripture";
 import Proverbs from "@/components/Proverbs";
 import Events from "@/components/Events";
 import Podcast from "@/components/Podcast";
+import Gallery from "@/components/Gallery";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function Home() {
       <Proverbs />
       <Events />
       <Podcast />
+      <Gallery />
       <CTA />
       <Contact />
       <Footer />

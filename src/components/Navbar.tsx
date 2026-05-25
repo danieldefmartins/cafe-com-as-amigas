@@ -10,6 +10,7 @@ const navLinks = [
   { href: "#palavra", label: "A Palavra" },
   { href: "#eventos", label: "Eventos" },
   { href: "#podcast", label: "Podcast" },
+  { href: "#galeria", label: "Galeria" },
 ];
 
 export default function Navbar() {
